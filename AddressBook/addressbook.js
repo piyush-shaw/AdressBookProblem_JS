@@ -98,3 +98,13 @@ class Contact{
                 +this.email;
     }
 }
+//UC3 create new address book array and add new contact
+let contacts=new Array();
+function AddContacts(firstname,lastname,address,city,state,zip,phoneNumber,email){
+    let contact=new Contact(firstname,lastname,address,city,state,zip,phoneNumber,email);
+    contacts.push(contact);
+}
+AddContacts('Piyush','Shaw','15MGRoad','Howrah','WestBengal','444444','91 8888888888','piyush@gmail.com');
+AddContacts('Ankita','Singh','10StreetRoad','Howrah','WestBengal','778666','91 7777777777','ankita@gmail.com');
+AddContacts('Ravi','Singh','5MangoRoad','Jamshedpur','Jharkhand','666666','91 9999999999','shubham@gmail.com');
+console.log(contacts.toString());

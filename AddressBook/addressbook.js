@@ -130,3 +130,15 @@ if(contactindex!=-1){
 }else{
     console.log("Name not found");
 }
+
+//UC5 delete contact by their name
+function deleteContactByName(firstname){
+    for(let i =0;i < contacts.length; i++){
+        if(contacts[i].firstname == firstname){
+            contacts.pop(i);
+            console.log(contacts.toString());
+        }
+    }
+}
+console.log("Contact Deleted");
+deleteContactByName('Rahul');

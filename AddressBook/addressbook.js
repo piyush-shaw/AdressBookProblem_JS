@@ -164,3 +164,10 @@ SearchCityOrState('Howrah');
 //searching with state
 console.log("**Search by State:");
 SearchCityOrState('WestBengal');
+
+//UC9 View By city
+console.log("View By City:");
+SearchCityOrState('Howrah');
+//View By state
+console.log("View By State:");
+SearchCityOrState('WestBengal');

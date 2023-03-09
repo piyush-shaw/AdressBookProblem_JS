@@ -142,3 +142,7 @@ function deleteContactByName(firstname){
 }
 console.log("Contact Deleted");
 deleteContactByName('Rahul');
+
+//UC6 number of persons in address book
+let count = contacts.reduce(count => count +=1,0);
+console.log("Number Of persons in Address Book is : " +count);

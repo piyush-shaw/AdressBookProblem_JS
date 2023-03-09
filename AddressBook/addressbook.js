@@ -171,3 +171,13 @@ SearchCityOrState('Howrah');
 //View By state
 console.log("View By State:");
 SearchCityOrState('WestBengal');
+
+//UC10 count person by city or state
+function getCountByCity(city) {
+    return contacts.filter(x => x.city == city).reduce((countOfContact, x) => countOfContact += 1, 0);
+}
+function getCountByState(state) {
+    return contacts.filter(x => x.state == state).reduce((countOfContact, x) => countOfContact += 1, 0);
+}
+console.log("Count By City: " + getCountByCity("Howrah"));
+console.log("Count By State: " + getCountByState("WestBengal"));

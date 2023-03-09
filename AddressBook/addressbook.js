@@ -98,6 +98,7 @@ class Contact{
                 +this.email;
     }
 }
+
 //UC3 create new address book array and add new contact
 let contacts=new Array();
 function AddContacts(firstname,lastname,address,city,state,zip,phoneNumber,email){
@@ -108,3 +109,24 @@ AddContacts('Piyush','Shaw','15MGRoad','Howrah','WestBengal','444444','91 888888
 AddContacts('Ankita','Singh','10StreetRoad','Howrah','WestBengal','778666','91 7777777777','ankita@gmail.com');
 AddContacts('Ravi','Singh','5MangoRoad','Jamshedpur','Jharkhand','666666','91 9999999999','shubham@gmail.com');
 console.log(contacts.toString());
+
+//UC4 edit person by their name
+function editContactByName(firstname){
+    for(let i = 0;i < contacts.length;i++){
+        if(contacts[i].firstname ==firstname){
+            return i;
+        }
+    }
+    return -1;
+}
+let contactindex=editContactByName('Ravi');
+if(contactindex!=-1){
+    console.log("Before Update: ");
+    console.log(contacts.toString());
+    contacts[contactindex].firstname='Rahul';
+    contacts[contactindex].city='Ranchi';
+    console.log("After Update: ");
+    console.log(contacts.toString());
+}else{
+    console.log("Name not found");
+}

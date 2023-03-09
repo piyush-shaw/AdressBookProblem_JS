@@ -110,7 +110,7 @@ function AddContacts(firstname,lastname,address,city,state,zip,phoneNumber,email
     contacts.push(contact);
 }
 AddContacts('Piyush','Shaw','15MGRoad','Howrah','WestBengal','444444','91 8888888888','piyush@gmail.com');
-AddContacts('Ankita','Singh','10StreetRoad','Howrah','WestBengal','778666','91 7777777777','ankita@gmail.com');
+AddContacts('Ankita','Singh','10StreetRoad','Kolkata','WestBengal','778666','91 7777777777','ankita@gmail.com');
 AddContacts('Ravi','Singh','5MangoRoad','Jamshedpur','Jharkhand','666666','91 9999999999','shubham@gmail.com');
 AddContacts('Ravi','Singh','5MangoRoad','Jamshedpur','Jharkhand','666666','91 9999999999','shubham@gmail.com');
 console.log(contacts.toString());
@@ -151,3 +151,16 @@ deleteContactByName('Rahul');
 //UC6 number of persons in address book
 let count = contacts.reduce(count => count +=1,0);
 console.log("Number Of persons in Address Book is : " +count);
+
+//UC8 search by city or state
+function SearchCityOrState(cityOrState){
+    if(contacts.filter((p=>p.city==cityOrState)||(p=>p.state==cityOrState))){
+        console.log(contacts.toString());
+    }
+}
+//searching with city
+console.log("**Search by City:");
+SearchCityOrState('Howrah');
+//searching with state
+console.log("**Search by State:");
+SearchCityOrState('WestBengal');
